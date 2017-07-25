@@ -7,9 +7,9 @@
 
 #if defined(__has_include)
 #if __has_include(<SuperAwesomeAdvertiserSDK/SuperAwesomeAdvertiserSDK.h>)
-#import <SuperAwesomeAdvertiserSDK/SuperAwesomeAdvertiserSDK.h>
+    #import <SuperAwesomeAdvertiserSDK/SuperAwesomeAdvertiserSDK.h>
 #else
-#import "SuperAwesomeAdvertiser.h"
+    #import "SuperAwesomeAdvertiser.h"
 #endif
 #endif
 

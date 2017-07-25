@@ -1,19 +1,16 @@
-//
-//  SAUnityCPI.m
-//  Pods
-//
-//  Created by Gabriel Coman on 13/02/2017.
-//
-//
+/**
+ * @Copyright:   SuperAwesome Trading Limited 2017
+ * @Author:      Gabriel Coman (gabriel.coman@superawesome.tv)
+ */
 
 #import <UIKit/UIKit.h>
 #import "SAdvUnityCallback.h"
 
 #if defined(__has_include)
 #if __has_include("SuperAwesomeAdvertiserSDKUnity.h")
-#import "SuperAwesomeAdvertiserSDKUnity.h"
+    #import "SuperAwesomeAdvertiserSDKUnity.h"
 #else
-#import "SuperAwesomeAdvertiser.h"
+    #import "SuperAwesomeAdvertiser.h"
 #endif
 #endif
 
