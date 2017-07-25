@@ -4,7 +4,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "FlashRuntimeExtensions.h"
+#import "FlashRuntimeExtensions2.h"
 #import "SAdvAIRSuperAwesomeAdvertiser.h"
 
 /**

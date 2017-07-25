@@ -4,7 +4,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "FlashRuntimeExtensions.h"
+#import "FlashRuntimeExtensions2.h"
 
 /**
  * C method that sends a call back to the AIR SDK with data suitable for CPI.
