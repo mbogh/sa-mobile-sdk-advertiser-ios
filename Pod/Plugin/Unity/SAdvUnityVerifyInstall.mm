@@ -22,7 +22,7 @@ extern "C" {
     void SuperAwesomeAdvertiserUnitySAVerifyInstall () {
          
         [[SAVerifyInstall getInstance] handleInstall:^(BOOL success) {
-            sendCPICallback(@"SuperAwesomeAdvertiser", success, @"HandleInstall");
+            sendCPICallback(@"SAVerifyInstall", success, @"HandleInstall");
         }];
     }
 }
