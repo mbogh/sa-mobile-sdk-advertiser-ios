@@ -17,7 +17,7 @@
 FREObject SuperAwesomeAdvertiserAIRSAVerifyInstall (FREContext ctx, void* funcData, uint32_t argc, FREObject argv[]) {
     
     [[SAVerifyInstall getInstance] handleInstall:^(BOOL success) {
-        sendCPICallback(ctx, @"SuperAwesomeAdvertiser", success, @"HandleInstall");
+        sendCPICallback(ctx, @"SAVerifyInstall", success, @"HandleInstall");
     }];
     
     return NULL;
