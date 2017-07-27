@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FlashRuntimeExtensions2.h"
-#import "SAdvAIRSuperAwesomeAdvertiser.h"
+#import "SAdvAIRVerifyInstall.h"
 
 /**
  * Method that initialzies an AIR Context by specifying all methods that should
@@ -23,9 +23,9 @@ void SAContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx,
     
     FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * *numFunctionsToTest);
     
-    func[0].name = (const uint8_t*) "SuperAwesomeAdvertiserAIRSACPIHandleInstall";
+    func[0].name = (const uint8_t*) "SuperAwesomeAdvertiserAIRSAVerifyInstall";
     func[0].functionData = NULL;
-    func[0].function = &SuperAwesomeAdvertiserAIRSACPIHandleInstall;
+    func[0].function = &SuperAwesomeAdvertiserAIRSAVerifyInstall;
     
     *functionsToSet = func;
 }

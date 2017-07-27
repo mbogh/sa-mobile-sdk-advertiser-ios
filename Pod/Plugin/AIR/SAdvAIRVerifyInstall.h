@@ -15,4 +15,4 @@
  * @param argv      argv paramter
  * @return          a new FREObject instance with return data
  */
-FREObject SuperAwesomeAdvertiserAIRSACPIHandleInstall (FREContext ctx, void* funcData, uint32_t argc, FREObject argv[]);
+FREObject SuperAwesomeAdvertiserAIRSAVerifyInstall (FREContext ctx, void* funcData, uint32_t argc, FREObject argv[]);

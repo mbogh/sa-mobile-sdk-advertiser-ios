@@ -6,7 +6,7 @@
 #import <UIKit/UIKit.h>
 #import "SAInstall.h"
 
-@interface SuperAwesomeAdvertiser : NSObject
+@interface SAVerifyInstall : NSObject
 
 /**
  * Singleton method to get the only existing instance

@@ -7,10 +7,10 @@
 #import "SAdvUnityCallback.h"
 
 #if defined(__has_include)
-#if __has_include("SuperAwesomeAdvertiserSDKUnity.h")
-    #import "SuperAwesomeAdvertiserSDKUnity.h"
+#if __has_include(<SuperAwesomeAdvertiserSDK/SAVerifyInstall.h>)
+#import <SuperAwesomeAdvertiserSDK/SAVerifyInstall.h>
 #else
-    #import "SuperAwesomeAdvertiser.h"
+#import "SAVerifyInstall.h"
 #endif
 #endif
 
@@ -19,9 +19,9 @@ extern "C" {
     /**
      * Unity to native iOS method that sends a CPI event.
      */
-    void SuperAwesomeAdvertiserUnitySACPIHandleInstall () {
+    void SuperAwesomeAdvertiserUnitySAVerifyInstall () {
          
-        [[SuperAwesomeAdvertiser getInstance] handleInstall:^(BOOL success) {
+        [[SAVerifyInstall getInstance] handleInstall:^(BOOL success) {
             sendCPICallback(@"SuperAwesomeAdvertiser", success, @"HandleInstall");
         }];
     }

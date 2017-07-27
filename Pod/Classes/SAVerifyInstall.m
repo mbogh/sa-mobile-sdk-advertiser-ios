@@ -3,13 +3,13 @@
  * @Author:      Gabriel Coman (gabriel.coman@superawesome.tv)
  */
 
-#import "SuperAwesomeAdvertiser.h"
+#import "SAVerifyInstall.h"
 #import "SAOnce.h"
 
-@implementation SuperAwesomeAdvertiser
+@implementation SAVerifyInstall
 
 + (instancetype) getInstance {
-    static SuperAwesomeAdvertiser *sharedMyManager = nil;
+    static SAVerifyInstall *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedMyManager = [[self alloc] init];
