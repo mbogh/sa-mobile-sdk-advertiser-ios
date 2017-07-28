@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+1.0.8
+ - Changed the Unity callback of "succesS" to string
+
 1.0.7
  - Removed all SDK dependencies to make it play nice on iOS with the publisher SDK
 

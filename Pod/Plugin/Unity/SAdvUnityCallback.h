@@ -32,6 +32,6 @@ static inline void sendToUnity1 (NSString *unityName, NSString *payload) {
  */
 static inline void sendCPICallback (NSString *unityName, BOOL success, NSString *callback) {
     
-    NSString *payload = [NSString stringWithFormat:@"{\"success\":%d, \"type\":\"sacallback_%@\"}", success, callback];
+    NSString *payload = [NSString stringWithFormat:@"{\"success\":\"%d\", \"type\":\"sacallback_%@\"}", success, callback];
     sendToUnity1(unityName, payload);
 }
