@@ -5,14 +5,6 @@
 
 #import <UIKit/UIKit.h>
 
-#if defined(__has_include)
-#if __has_include(<SuperAwesomeSDK/NSDictionary+SAJson.h>)
-#import <SuperAwesomeSDK/NSDictionary+SAJson.h>
-#else
-#import "NSDictionary+SAJson.h"
-#endif
-#endif
-
 // forward declaration of this method - which is part of the Unity C
 // libray, so it would be available there
 void UnitySendMessage(const char *identifier, const char *function, const char *payload);
@@ -21,12 +13,11 @@ void UnitySendMessage(const char *identifier, const char *function, const char *
  * Generic method used to send messages back to unity
  *
  * @param unityName the name of the unity ad to send the message back to
- * @param data      a dictionary of data to send back
+ * @param payload   the data to send back
  */
-static inline void sendToUnity1 (NSString *unityName, NSDictionary *data) {
+static inline void sendToUnity1 (NSString *unityName, NSString *payload) {
     
     const char *name = [unityName UTF8String];
-    NSString *payload = [data jsonCompactStringRepresentation];
     const char *payloadUTF8 = [payload UTF8String];
     UnitySendMessage (name, "nativeCallback", payloadUTF8);
     
@@ -41,10 +32,6 @@ static inline void sendToUnity1 (NSString *unityName, NSDictionary *data) {
  */
 static inline void sendCPICallback (NSString *unityName, BOOL success, NSString *callback) {
     
-    NSDictionary *data = @{
-                           @"success": [NSString stringWithFormat:@"%d", success],
-                           @"type": [NSString stringWithFormat:@"sacallback_%@", callback]
-                           };
-    sendToUnity1(unityName, data);
-    
+    NSString *payload = [NSString stringWithFormat:@"{\"success\":%d, \"type\":\"sacallback_%@\"}", success, callback];
+    sendToUnity1(unityName, payload);
 }

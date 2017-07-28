@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+1.0.7
+ - Removed all SDK dependencies to make it play nice on iOS with the publisher SDK
+
 1.0.6
  - Added an umbrella header file called 'SuperAwesomeAdvertiser.h'
  

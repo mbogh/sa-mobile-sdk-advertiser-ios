@@ -29,24 +29,15 @@
 }
 
 - (void) handleInstall:(saDidCountAnInstall)response {
-    SASession *session = [[SASession alloc] init];
-    [session setConfigurationProduction];
-    [self handleInstall:session withResponse:response];
+    [self handleInstall:[SAAdvUtils getBundleId] andConfiguration:advPRODUCTION withResponse:response];
 }
 
-- (void) handleInstall:(SASession *)session
-          withResponse:(saDidCountAnInstall)response {
-    [self handleInstall:session
-             withTarget:[session getBundleId]
-            andResponse:response];
-}
-
-- (void) handleInstall:(SASession *)session
-            withTarget:(NSString *)target
-           andResponse:(saDidCountAnInstall)response {
+- (void) handleInstall: (NSString*) target
+      andConfiguration: (SAdvConfiguration) configuration
+          withResponse: (saDidCountAnInstall) response {
     
     __block SAOnce    *once    = [[SAOnce alloc] init];
-    SAInstall *install = [[SAInstall alloc] init];
+    SAInstall         *install = [[SAInstall alloc] init];
     
     // check to see if the CPI event has already been sent
     BOOL isSent = [once isCPISent];
@@ -56,9 +47,9 @@
         
         // proceed with sending the install event
         [install sendInstallEventToServer:target
-                              withSession:session
+                         andConfiguration:configuration
                               andResponse:^(BOOL success) {
-                                 
+                                  
                                   // and once done, set the CPI event as sent
                                   [once setCPISent];
                                   
@@ -70,7 +61,6 @@
                               }];
         
     }
-    
 }
 
 @end

@@ -4,14 +4,7 @@
  */
 
 #import <UIKit/UIKit.h>
-
-#if defined(__has_include)
-#if __has_include(<SASession/SASession.h>)
-#import <SASession/SASession.h>
-#else
-#import "SASession.h"
-#endif
-#endif
+#import "SAAdvUtils.h"
 
 // callback block to send back envets back to the SDK users
 typedef void (^saDidCountAnInstall)(BOOL success);
@@ -32,12 +25,11 @@ typedef void (^saDidCountAnInstall)(BOOL success);
 /**
  * Get the base install url
  *
- * @param session current session
  * @return        an url of one of two forms:
  *                - https://ads.superawesome.tv/v2/install
  *                - https://ads.staging.superawesome.tv/v2/install
  */
-- (NSString*) getInstallUrl: (SASession*) session;
+- (NSString*) getInstallUrl:(SAdvConfiguration) configuration;
 
 /**
  * Get the additional install query
@@ -66,29 +58,16 @@ typedef void (^saDidCountAnInstall)(BOOL success);
 - (NSDictionary*) getInstallHeader;
 
 /**
- * Method that parser the server response for an "/install" GET event call.
- *
- * @param serverResponse the server response, as a string; 
- *                       it usually is of the form:
- *                       - { "success" : true }
- *                       - { "success" : false }
- *                       but if the ad server responde with 404 or 400 
- *                       or another error code, it could also be null.
- * @return               true or false, depending on the actual string
- */
-- (BOOL) parseServerResponse: (NSString*) serverResponse;
-
-/**
  * Method that actually sends an install event to the server, based on a number of
  * parameters.
  *
  * @param targetPackageName the package name of the app just being installed
  *                          current app to be installed
- * @param session           the current session
+ * @param configuration     either production or staging
  * @param response          a callback block of type saDidCountAnInstall
  */
-- (void) sendInstallEventToServer: (NSString*) targetPackageName
-                      withSession: (SASession*) session
-                      andResponse: (saDidCountAnInstall) response;
+- (void) sendInstallEventToServer:(NSString *)targetPackageName
+                 andConfiguration:(SAdvConfiguration) configuration
+                      andResponse:(saDidCountAnInstall)response;
 
 @end
