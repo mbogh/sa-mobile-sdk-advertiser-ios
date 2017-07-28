@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+1.0.9
+ - Changed name of context initializer function for AIR
+
 1.0.8
  - Changed the Unity callback of "succesS" to string
 

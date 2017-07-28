@@ -17,7 +17,7 @@
  * @param numFunctionsToTest    functions in program
  * @param functionsToSet        functions to set
  */
-void SAContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet) {
+void SAdvContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet) {
     
     *numFunctionsToTest = 1;
     
@@ -37,7 +37,7 @@ void SAContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx,
  * @param ctxInitializerToSet   context initializer function pointer
  * @param ctxFinalizerToSet     context finalizer function pointer
  */
-void SAExtensionInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet){
+void SAdvExtensionInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet){
     *extDataToSet = NULL;
-    *ctxInitializerToSet = &SAContextInitializer;
+    *ctxInitializerToSet = &SAdvContextInitializer;
 }
