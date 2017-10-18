@@ -5,10 +5,10 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 The SuperAwesome Mobile Advertising SDK lets you easily measure installs for your app in a COPPA/GDPR compliant way.
 			DESC
-  s.homepage         = 'https://github.com/BalasTudor/sa-mobile-sdk-advertiser-ios'
+  s.homepage         = 'https://github.com/SuperAwesomeLTD/sa-mobile-sdk-advertiser-ios'
   s.license          = { :type => "GNU GENERAL PUBLIC LICENSE Version 3", :file => "LICENSE" }
-  s.author           = { ‘Balas Tudor-dan’ => ‘tudor@halcyonmobile.com’ }
-  s.source           = { :git => 'https://github.com/BalasTudor/sa-mobile-sdk-advertiser-ios.git', :tag => ‘1.0.10’ }
+  s.author           = { 'Gabriel Coman' => 'gabriel.coman@superawesome.tv' }
+  s.source           = { :git => 'https://github.com/SuperAwesomeLTD/sa-mobile-sdk-advertiser-ios.git', :tag => ‘1.0.10’ }
   s.platform         = :ios, '8.0'
   s.default_subspec  = 'Base'
   s.requires_arc     = true
