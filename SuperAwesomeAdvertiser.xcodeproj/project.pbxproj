@@ -17,7 +17,6 @@
 		1BA4E0291F972E1E00E9E070 /* SAOnce.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4E0131F972E1E00E9E070 /* SAOnce.m */; };
 		1BA4E02A1F972E1E00E9E070 /* SAVerifyInstall.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA4E0141F972E1E00E9E070 /* SAVerifyInstall.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BA4E02B1F972E1E00E9E070 /* SAVerifyInstall.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA4E0151F972E1E00E9E070 /* SAVerifyInstall.m */; };
-		1BA4E02C1F972E1E00E9E070 /* SuperAwesomeAdvertiser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA4E0161F972E1E00E9E070 /* SuperAwesomeAdvertiser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BA4E0351F972EEC00E9E070 /* SuperAwesomeAdvertiser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA4E0011F972DF800E9E070 /* SuperAwesomeAdvertiser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		1BA4E0131F972E1E00E9E070 /* SAOnce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAOnce.m; sourceTree = "<group>"; };
 		1BA4E0141F972E1E00E9E070 /* SAVerifyInstall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAVerifyInstall.h; sourceTree = "<group>"; };
 		1BA4E0151F972E1E00E9E070 /* SAVerifyInstall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAVerifyInstall.m; sourceTree = "<group>"; };
-		1BA4E0161F972E1E00E9E070 /* SuperAwesomeAdvertiser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperAwesomeAdvertiser.h; sourceTree = "<group>"; };
 		1BA4E0191F972E1E00E9E070 /* FlashRuntimeExtensions2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions2.h; sourceTree = "<group>"; };
 		1BA4E01A1F972E1E00E9E070 /* SAdvAIR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAdvAIR.m; sourceTree = "<group>"; };
 		1BA4E01B1F972E1E00E9E070 /* SAdvAIRCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAdvAIRCallback.h; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				1BA4E0131F972E1E00E9E070 /* SAOnce.m */,
 				1BA4E0141F972E1E00E9E070 /* SAVerifyInstall.h */,
 				1BA4E0151F972E1E00E9E070 /* SAVerifyInstall.m */,
-				1BA4E0161F972E1E00E9E070 /* SuperAwesomeAdvertiser.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -158,7 +155,6 @@
 			files = (
 				1BA4E0241F972E1E00E9E070 /* SAAdvUtils.h in Headers */,
 				1BA4E0351F972EEC00E9E070 /* SuperAwesomeAdvertiser.h in Headers */,
-				1BA4E02C1F972E1E00E9E070 /* SuperAwesomeAdvertiser.h in Headers */,
 				1BA4E0261F972E1E00E9E070 /* SAInstall.h in Headers */,
 				1BA4E0281F972E1E00E9E070 /* SAOnce.h in Headers */,
 				1BA4E02A1F972E1E00E9E070 /* SAVerifyInstall.h in Headers */,
