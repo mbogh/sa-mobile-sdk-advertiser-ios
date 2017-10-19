@@ -6,11 +6,11 @@
 //  Copyright © 2017 Tudor-Dan Balas. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <SuperAwesomeProject/SAVerifyInstall.h>
-#import <SuperAwesomeProject/SAOnce.h>
-#import <SuperAwesomeProject/SAInstall.h>
-#import <SuperAwesomeProject/SAAdvUtils.h>
+#import "UIKit.h"
+#import "SAVerifyInstall.h"
+#import "SAOnce.h"
+#import "SAInstall.h"
+#import "SAAdvUtils.h"
 
 //! Project version number for SuperAwesomeAdvertiser.
 FOUNDATION_EXPORT double SuperAwesomeAdvertiserVersionNumber;
