@@ -6,7 +6,7 @@
 //  Copyright © 2017 Tudor-Dan Balas. All rights reserved.
 //
 
-#import "UIKit.h"
+#import <UIKit/UIKit.h>
 #import "SAVerifyInstall.h"
 #import "SAOnce.h"
 #import "SAInstall.h"
