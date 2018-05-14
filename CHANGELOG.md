@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+2.0.0
+ - Version change
+
 1.0.9
  - Changed name of context initializer function for AIR
 
