@@ -105,17 +105,24 @@
             
             //
             // log event
-            NSLog(@"[true] | HTTP %@ | %ld | %@", @"GET", (long)status, _mendpoint);
+            NSLog(@"[true] | HTTP %@ | %ld | %@ ==> %@ ", @"GET", (long)status, _mendpoint, payload);
             
             //
             // send back
-            if (payload != nil && [payload rangeOfString:@"true"].location > 0) {
-                if (response != nil) {
-                    response (true);
+            if (payload != nil) {
+                if ([payload containsString:@"true"]) {
+                    if (response != nil) {
+                        response (true);
+                    }
+                } else {
+                    if (response != nil) {
+                        response (false);
+                    }
                 }
-            } else {
+            }
+            else {
                 if (response != nil) {
-                    response (false);
+                    response(false);
                 }
             }
         });
