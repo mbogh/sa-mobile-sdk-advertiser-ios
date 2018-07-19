@@ -109,7 +109,7 @@
             
             //
             // send back
-            if (payload != nil && [payload rangeOfString:@"true"].location > -1) {
+            if (payload != nil && [payload rangeOfString:@"true"].location > 0) {
                 if (response != nil) {
                     response (true);
                 }
